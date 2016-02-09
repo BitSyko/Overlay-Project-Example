@@ -4,6 +4,6 @@
 This project is a little bit enhanced to be better compatible to the Layers plugin for Layers manager (https://github.com/BitSyko/LayersThemePlugin_Example) which can be used for publishing your theme on the playStore.
   - No need to edit the Manifest file, all relevant things are inside the build.gradle file
   - Automatic applicationId naming like : Overlay.ThemeName.OverlayedApp
-  - Automatic Overlay apk file naming like: ThemeName_OverlayedApp_apk
+  - Automatic Overlay apk file naming like: ThemeName_OverlayedApp.apk (as necessary for a Layers Manager Plugin)
   - Save all Overlays in specific Folder
   - Group Overlays of specific categories (used in Layers Manager Plugin)
