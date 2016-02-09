@@ -4,11 +4,14 @@ android {
     compileSdkVersion 23
     buildToolsVersion "23.0.2"
 
+    //Name of Your Theme
     def themeName = "ThemeName"
+    //Name of the Zip the Overlay should be in (Usefull if you want to use a Layers Manager plugin to publish your theme
     def themeZip = "General"
+    //Name of the App which gets overlayed
     def overlayName = "OverlayedAppName"
 
-
+    //Folder where all Overlays should be copied to after building
     def outputFolder = "D:/Niklas/Desktop/"
     def apk =".apk"
 
@@ -19,7 +22,9 @@ android {
         versionCode 1
         versionName "1.0"
         manifestPlaceholders=[
+                //Overlay priority
                 priorityLabel:"60",
+                //package name of overlayed app
                 targetPackageLabel:"packageNameOfOverlayedApp",
 
         ]
