@@ -1,0 +1,7 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="A">
+
+    <overlay android:targetPackage="${targetPackageLabel}" android:priority="${priorityLabel}"/>
+
+</manifest>
+

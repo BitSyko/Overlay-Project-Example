@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    def themeName = "ThemeName"
+    def themeZip = "General"
+    def overlayName = "OverlayedAppName"
+
+
+    def outputFolder = "D:/Niklas/Desktop/"
+    def apk =".apk"
+
+    defaultConfig {
+        applicationId "Overlay." +themeName +"." + overlayName
+        minSdkVersion 23
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        manifestPlaceholders=[
+                priorityLabel:"60",
+                targetPackageLabel:"packageNameOfOverlayedApp",
+
+        ]
+    }
+    buildTypes {
+        applicationVariants.all { variant ->
+            variant.outputs.each { output ->
+                output.outputFile = file(outputFolder +"/" +themeName +"/" + themeZip + "/" + themeName +"_"+overlayName + apk)
+            }
+        }
+    }
+
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+}
